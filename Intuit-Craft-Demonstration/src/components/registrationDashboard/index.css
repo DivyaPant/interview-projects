@@ -1,0 +1,210 @@
+.dashboard-body {
+    box-sizing: border-box;
+    margin: 4rem 2rem 0;
+    display: grid;
+    justify-content: space-between;
+    align-items: start;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 2%;
+    grid-auto-flow: column;
+}
+.dashboard-left-container, .dashboard-right-container {
+    
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.dashboard-left-container {
+    padding-left: 1rem;
+    flex: 1 0 70%;
+}
+.dashboard-right-container {
+    flex: 0 0 30%;
+    box-shadow: 0px 0px 10px -4px;
+    background-color: #fff;
+}
+   
+.dashboard-left-body, .dashboard-right-body {
+    display: flex;
+    flex-wrap: wrap;
+}
+.dashboard-right-body {
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    flex-direction: column;
+}
+.card-container {
+    position: relative;
+    width: 14rem;
+    border: 1px solid rgba(0,119, 197, 0.25);
+    padding: 1rem;
+    background-color: rgba(0,119, 197, 0.05);
+    display: flex;
+    border-radius: 5px;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.2);
+}
+
+.card-left {
+padding: 0.75rem;
+font-size: 2.5rem;
+font-weight: 500;
+}
+
+.card-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border-left: 1px solid;
+    padding-left: 0.75rem;
+}
+.card-event-name {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+button {
+    align-self: flex-end;
+    cursor: pointer;
+    background-color: #01376d;
+    color: #fff;
+    height: 2.25rem;
+    padding: 0 1.75rem;
+    text-transform: capitalize;
+    margin: 0.5rem 0.5rem 0;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #00274e;
+    transition: all ease-in 0.2s;
+}
+
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+.filter-buttons {
+    border: 1px solid rgb(204, 204, 204);
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 32px;
+    cursor: pointer;
+    color: rgb(201, 0, 122)
+}
+.filter-buttons:hover, .filter-buttons > .active {
+    color: white;
+    background-color: rgba(0,119, 197, 0.05);
+    background-color: rgb(201, 0, 122);
+}
+.card-disabled {
+    background: rgb(0 0 0 / 5%);
+    box-shadow: none;
+    cursor: not-allowed;
+}
+button:disabled {
+    cursor: not-allowed;
+    background: rgb(0 0 0 / 20%);
+    border: none;
+}
+.info {
+    text-align: left;
+    padding-bottom: 0.75rem;
+    color: rgb(178 175 175);
+}
+.error {
+    text-align: left;
+    padding-bottom: 0.75rem;
+    color: red;
+    font-weight: 500;
+}
+.registration-button {
+    font-weight: bold;
+    font-size: 1.125rem;
+    height: 3rem;
+    width: 16rem;
+    align-self: center;
+    border: 1px solid rgb(204, 204, 204);
+    padding: 0.5rem 1rem;
+    border-radius: 32px;
+    cursor: pointer;
+    color: rgb(201, 0, 122);
+    background-color: white;
+}
+.registration-button:hover {
+    background-color: rgb(201, 0, 122);
+    color: white;
+}
+.selected-icon {
+    position: absolute;
+    right: 1%;
+    top: 1%;
+    height: 28px;
+    width: 28px;
+}
+.remove-all {
+    text-decoration: underline;
+    cursor: pointer;
+    text-align: start;
+    padding-left: 1rem;
+}
+
+
+/* tablet view */
+@media only screen and (max-width: 1024px) {
+    .dashboard-body {
+        grid-template-columns: 2fr 1fr;
+    }
+    .dashboard-left-container, .dashboard-right-container {
+       flex: auto;
+       align-items: center;
+    }
+   .dashboard-left-body, .dashboard-right-body {
+    align-items: center;
+       justify-content: center;
+   }
+    
+}
+
+
+/* Mobile View */
+@media only screen and (max-width: 425px) {
+    .dashboard-body {
+        grid-gap: 1%;
+        grid-template-rows: 1fr auto;
+    grid-template-columns: none;
+        margin: 4rem 1rem;
+        
+    }
+    .dashboard-left-container, .dashboard-right-container {
+        align-items: center;
+        justify-content: start;
+        width: 100%;
+        padding: 0;
+    }
+    .dashboard-right-container {
+        box-shadow: none;
+        background: inherit;
+        margin-top: 2rem;
+        height: auto;
+    }
+    .dashboard-right-body {
+        flex-direction: initial;
+    }
+    .filter-buttons {
+        margin-right: 0.5rem;
+    }
+    .card-container {
+        width: 70%;
+        margin: auto;
+        margin-bottom: 1rem;
+        align-items: center;
+    justify-content: center;
+    }
+    
+}
